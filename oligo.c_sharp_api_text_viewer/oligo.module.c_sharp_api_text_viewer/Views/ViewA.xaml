@@ -8,6 +8,7 @@
              d:DesignHeight="600"
              d:DesignWidth="600"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:models="clr-namespace:oligo.module.c_sharp_api_text_viewer.Models"
              prism:ViewModelLocator.AutoWireViewModel="True">
     
     <Grid Margin="5">
@@ -29,7 +30,9 @@
 
         <Label Content="{Binding ApiTypeText}" />
         <ComboBox Grid.Row="1"
-                  Grid.Column="0" />
+                  Grid.Column="0" 
+                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type models:ApiTypes}}}"
+                  />
         <Label Content="{Binding SearchMessageText}"
                Grid.Row="2"
                Grid.Column="0" />

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oligo.ui.c_sharp_api_text_v
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oligo.module.c_sharp_api_text_viewer", "oligo.module.c_sharp_api_text_viewer\oligo.module.c_sharp_api_text_viewer.csproj", "{C0C474BB-5FDE-49A0-91D3-EF6D8352DEF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oligo.domain.infrastructure", "oligo.domain.infrastructure\oligo.domain.infrastructure.csproj", "{D87E139E-12DB-4671-AFF8-E448FC725442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C0C474BB-5FDE-49A0-91D3-EF6D8352DEF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C474BB-5FDE-49A0-91D3-EF6D8352DEF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0C474BB-5FDE-49A0-91D3-EF6D8352DEF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D87E139E-12DB-4671-AFF8-E448FC725442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D87E139E-12DB-4671-AFF8-E448FC725442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D87E139E-12DB-4671-AFF8-E448FC725442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D87E139E-12DB-4671-AFF8-E448FC725442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
