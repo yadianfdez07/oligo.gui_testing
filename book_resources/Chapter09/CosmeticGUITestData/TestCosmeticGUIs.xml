@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GUIInfoSerializable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AUTPath>C:\GUISourceCode\Chapter03\CSharpAPITextViewer\bin\Debug\CSharpAPITextViewer.exe</AUTPath>
+  <AUTStartupForm>CSharpAPITextViewer.Form1</AUTStartupForm>
+  <GUIInfoSerializable>
+    <GUIInfo>
+      <GUIHandle>722542</GUIHandle>
+      <GUIText>API Type:</GUIText>
+      <GUIClassName>WindowsForms10.STATIC.app3</GUIClassName>
+      <GUIParentText>C# API Text Viewer</GUIParentText>
+      <GUIControlName>lblAPITypes</GUIControlName>
+      <GUIControlType>System.Windows.Forms.Label</GUIControlType>
+      <GUIMemberType>VerifyField</GUIMemberType>
+    </GUIInfo>
+    <GUIInfo>
+      <GUIHandle>394736</GUIHandle>
+      <GUIText>Type the first few letters of the function name you look for:</GUIText>
+      <GUIClassName>WindowsForms10.STATIC.app3</GUIClassName>
+      <GUIParentText>C# API Text Viewer</GUIParentText>
+      <GUIControlName>lblLookfor</GUIControlName>
+      <GUIControlType>System.Windows.Forms.Label</GUIControlType>
+      <GUIMemberType>VerifyField</GUIMemberType>
+    </GUIInfo>
+    <GUIInfo>
+      <GUIHandle>460278</GUIHandle>
+      <GUIText>Available functions:</GUIText>
+      <GUIClassName>WindowsForms10.STATIC.app3</GUIClassName>
+      <GUIParentText>C# API Text Viewer</GUIParentText>
+      <GUIControlName>lblAvailablefuncs</GUIControlName>
+      <GUIControlType>System.Windows.Forms.Label</GUIControlType>
+      <GUIMemberType>VerifyField</GUIMemberType>
+    </GUIInfo>
+    <GUIInfo>
+      <GUIHandle>329198</GUIHandle>
+      <GUIText>Selected functions:</GUIText>
+      <GUIClassName>WindowsForms10.STATIC.app3</GUIClassName>
+      <GUIParentText>C# API Text Viewer</GUIParentText>
+      <GUIControlName>lblSelected</GUIControlName>
+      <GUIControlType>System.Windows.Forms.Label</GUIControlType>
+      <GUIMemberType>VerifyField</GUIMemberType>
+    </GUIInfo>
+    <GUIInfo>
+      <GUIHandle>919008</GUIHandle>
+      <GUIText>Scope</GUIText>
+      <GUIClassName>WindowsForms10.Window.8.app3</GUIClassName>
+      <GUIParentText>C# API Text Viewer</GUIParentText>
+      <GUIControlName>grpScope</GUIControlName>
+      <GUIControlType>System.Windows.Forms.GroupBox</GUIControlType>
+      <GUIMemberType>VerifyField</GUIMemberType>
+    </GUIInfo>
+  </GUIInfoSerializable>
+</GUIInfoSerializable>

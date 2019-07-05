@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingGUIAction", "LateBindingGUIAction.csproj", "{B9DDEE8D-C4AE-45DC-A6D3-5CF82BDC4FC0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B9DDEE8D-C4AE-45DC-A6D3-5CF82BDC4FC0}.Debug.ActiveCfg = Debug|.NET
+		{B9DDEE8D-C4AE-45DC-A6D3-5CF82BDC4FC0}.Debug.Build.0 = Debug|.NET
+		{B9DDEE8D-C4AE-45DC-A6D3-5CF82BDC4FC0}.Release.ActiveCfg = Release|.NET
+		{B9DDEE8D-C4AE-45DC-A6D3-5CF82BDC4FC0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

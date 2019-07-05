@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLExtractor", "XMLExtractor.csproj", "{BA2B7B0D-D6DB-427B-B587-718DA7CC501D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BA2B7B0D-D6DB-427B-B587-718DA7CC501D}.Debug.ActiveCfg = Debug|.NET
+		{BA2B7B0D-D6DB-427B-B587-718DA7CC501D}.Debug.Build.0 = Debug|.NET
+		{BA2B7B0D-D6DB-427B-B587-718DA7CC501D}.Release.ActiveCfg = Release|.NET
+		{BA2B7B0D-D6DB-427B-B587-718DA7CC501D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

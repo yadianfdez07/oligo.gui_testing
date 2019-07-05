@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUITestDiscovery", "GUITestDiscovery.csproj", "{F57882F3-21B4-46EA-9511-8D5B0FDA2CAA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F57882F3-21B4-46EA-9511-8D5B0FDA2CAA}.Debug.ActiveCfg = Debug|.NET
+		{F57882F3-21B4-46EA-9511-8D5B0FDA2CAA}.Debug.Build.0 = Debug|.NET
+		{F57882F3-21B4-46EA-9511-8D5B0FDA2CAA}.Release.ActiveCfg = Release|.NET
+		{F57882F3-21B4-46EA-9511-8D5B0FDA2CAA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

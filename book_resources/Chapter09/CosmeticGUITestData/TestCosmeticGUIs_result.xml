@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TypeVerification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AUTPath>C:\GUISourceCode\Chapter03\CSharpAPITextViewer\bin\Debug\CSharpAPITextViewer.exe</AUTPath>
+  <TypeName>CSharpAPITextViewer.Form1</TypeName>
+  <TestEvents>
+    <TestAndVerify>
+      <EventMember>lblAPITypes</EventMember>
+      <VerifyingMember>lblAPITypes</VerifyingMember>
+      <GUIActionSequence>1</GUIActionSequence>
+      <isGUI>true</isGUI>
+      <isField>true</isField>
+      <isProperty>false</isProperty>
+      <ExpectingResult />
+      <ActualResult>API Type:</ActualResult>
+      <ScreenSnapshot>API Type:</ScreenSnapshot>
+      <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+      <AlphanumericPass>true</AlphanumericPass>
+      <ActualClpbrdObj xsi:type="xsd:string">public static void HandleCosmeticGUIs(ref int hwnd, ref string winText, ref string clsName, ref string pText)
+{
+			
+  int r = FindGUILike(ref hwnd, 0, ref winText, ref clsName, ref pText);
+
+  CenterMouseOn(hwnd);
+}
+</ActualClpbrdObj>
+      <ExpectedClpbrdObj xsi:type="xsd:string">API Type:</ExpectedClpbrdObj>
+      <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+      <ClipboardPass>false</ClipboardPass>
+      <FileTestPass>true</FileTestPass>
+      <OjectTestPass>true</OjectTestPass>
+      <ActualCosmeticStr xsi:type="xsd:string">Caption: API Type:
+ Size: {Width=100, Height=23}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=8}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ActualCosmeticStr>
+      <ExpectedCosmeticStr xsi:type="xsd:string">Caption: API Type:
+ Size: {Width=100, Height=23}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=8}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+      <CosmeticTestPass xsi:type="xsd:boolean">true</CosmeticTestPass>
+    </TestAndVerify>
+    <TestAndVerify>
+      <EventMember>lblLookfor</EventMember>
+      <VerifyingMember>lblLookfor</VerifyingMember>
+      <GUIActionSequence>2</GUIActionSequence>
+      <isGUI>true</isGUI>
+      <isField>true</isField>
+      <isProperty>false</isProperty>
+      <ExpectingResult />
+      <ActualResult>Type the first few letters of the function name you look for:</ActualResult>
+      <ScreenSnapshot>Type the first few letters of the function name you look for:</ScreenSnapshot>
+      <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+      <AlphanumericPass>true</AlphanumericPass>
+      <ActualClpbrdObj xsi:type="xsd:string">public static void HandleCosmeticGUIs(ref int hwnd, ref string winText, ref string clsName, ref string pText)
+{
+			
+  int r = FindGUILike(ref hwnd, 0, ref winText, ref clsName, ref pText);
+
+  CenterMouseOn(hwnd);
+}
+</ActualClpbrdObj>
+      <ExpectedClpbrdObj xsi:type="xsd:string">Type the first few letters of the function name you look for:</ExpectedClpbrdObj>
+      <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+      <ClipboardPass>false</ClipboardPass>
+      <FileTestPass>true</FileTestPass>
+      <OjectTestPass>true</OjectTestPass>
+      <ActualCosmeticStr xsi:type="xsd:string">Caption: Type the first few letters of the function name you look for:
+ Size: {Width=312, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=48}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ActualCosmeticStr>
+      <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Type the first few letters of the function name you look for:
+ Size: {Width=312, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=48}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+      <CosmeticTestPass xsi:type="xsd:boolean">true</CosmeticTestPass>
+    </TestAndVerify>
+    <TestAndVerify>
+      <EventMember>lblAvailablefuncs</EventMember>
+      <VerifyingMember>lblAvailablefuncs</VerifyingMember>
+      <GUIActionSequence>3</GUIActionSequence>
+      <isGUI>true</isGUI>
+      <isField>true</isField>
+      <isProperty>false</isProperty>
+      <ExpectingResult />
+      <ActualResult>Available functions:</ActualResult>
+      <ScreenSnapshot>Available functions:</ScreenSnapshot>
+      <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+      <AlphanumericPass>true</AlphanumericPass>
+      <ActualClpbrdObj xsi:type="xsd:string">public static void HandleCosmeticGUIs(ref int hwnd, ref string winText, ref string clsName, ref string pText)
+{
+			
+  int r = FindGUILike(ref hwnd, 0, ref winText, ref clsName, ref pText);
+
+  CenterMouseOn(hwnd);
+}
+</ActualClpbrdObj>
+      <ExpectedClpbrdObj xsi:type="xsd:string">Available functions:</ExpectedClpbrdObj>
+      <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+      <ClipboardPass>false</ClipboardPass>
+      <FileTestPass>true</FileTestPass>
+      <OjectTestPass>true</OjectTestPass>
+      <ActualCosmeticStr xsi:type="xsd:string">Caption: Available functions:
+ Size: {Width=272, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=88}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ActualCosmeticStr>
+      <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Available functions:
+ Size: {Width=272, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=88}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+      <CosmeticTestPass xsi:type="xsd:boolean">true</CosmeticTestPass>
+    </TestAndVerify>
+    <TestAndVerify>
+      <EventMember>lblSelected</EventMember>
+      <VerifyingMember>lblSelected</VerifyingMember>
+      <GUIActionSequence>4</GUIActionSequence>
+      <isGUI>true</isGUI>
+      <isField>true</isField>
+      <isProperty>false</isProperty>
+      <ExpectingResult />
+      <ActualResult>Selected functions:</ActualResult>
+      <ScreenSnapshot>Selected functions:</ScreenSnapshot>
+      <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+      <AlphanumericPass>true</AlphanumericPass>
+      <ActualClpbrdObj xsi:type="xsd:string">public static void HandleCosmeticGUIs(ref int hwnd, ref string winText, ref string clsName, ref string pText)
+{
+			
+  int r = FindGUILike(ref hwnd, 0, ref winText, ref clsName, ref pText);
+
+  CenterMouseOn(hwnd);
+}
+</ActualClpbrdObj>
+      <ExpectedClpbrdObj xsi:type="xsd:string">Selected functions:</ExpectedClpbrdObj>
+      <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+      <ClipboardPass>false</ClipboardPass>
+      <FileTestPass>true</FileTestPass>
+      <OjectTestPass>true</OjectTestPass>
+      <ActualCosmeticStr xsi:type="xsd:string">Caption: Selected functions:
+ Size: {Width=272, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=208}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ActualCosmeticStr>
+      <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Selected functions:
+ Size: {Width=272, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=208}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+      <CosmeticTestPass xsi:type="xsd:boolean">true</CosmeticTestPass>
+    </TestAndVerify>
+    <TestAndVerify>
+      <EventMember>grpScope</EventMember>
+      <VerifyingMember>grpScope</VerifyingMember>
+      <GUIActionSequence>5</GUIActionSequence>
+      <isGUI>true</isGUI>
+      <isField>true</isField>
+      <isProperty>false</isProperty>
+      <ExpectingResult />
+      <ActualResult>Scope</ActualResult>
+      <ScreenSnapshot>Scope</ScreenSnapshot>
+      <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+      <AlphanumericPass>true</AlphanumericPass>
+      <ActualClpbrdObj xsi:type="xsd:string">public static void HandleCosmeticGUIs(ref int hwnd, ref string winText, ref string clsName, ref string pText)
+{
+			
+  int r = FindGUILike(ref hwnd, 0, ref winText, ref clsName, ref pText);
+
+  CenterMouseOn(hwnd);
+}
+</ActualClpbrdObj>
+      <ExpectedClpbrdObj xsi:type="xsd:string">Scope</ExpectedClpbrdObj>
+      <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+      <ClipboardPass>false</ClipboardPass>
+      <FileTestPass>true</FileTestPass>
+      <OjectTestPass>true</OjectTestPass>
+      <ActualCosmeticStr xsi:type="xsd:string">Caption: Scope
+ Size: {Width=120, Height=72}
+ Child GUIs: 2
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=344,Y=136}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: True</ActualCosmeticStr>
+      <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Scope
+ Size: {Width=120, Height=72}
+ Child GUIs: 2
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=344,Y=136}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: True</ExpectedCosmeticStr>
+      <CosmeticTestPass xsi:type="xsd:boolean">true</CosmeticTestPass>
+    </TestAndVerify>
+  </TestEvents>
+</TypeVerification>

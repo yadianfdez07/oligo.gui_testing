@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TypeVerificationSerializable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AUTPath>C:\GUISourceCode\Chapter03\CSharpAPITextViewer\bin\Debug\CSharpAPITextViewer.exe</AUTPath>
+  <AUTStartupForm>CSharpAPITextViewer.Form1</AUTStartupForm>
+  <TypeVerificationSerializable>
+    <FormUnderTest>
+      <TypeName>CSharpAPITextViewer.Form1</TypeName>
+      <GUIEvent>lblAPITypes</GUIEvent>
+      <TestEvents>
+        <TestAndVerify>
+          <EventMember>lblAPITypes</EventMember>
+          <VerifyingMember>lblAPITypes</VerifyingMember>
+          <GUIActionSequence>1</GUIActionSequence>
+          <isGUI>false</isGUI>
+          <isField>false</isField>
+          <isProperty>false</isProperty>
+          <ExpectingResult />
+          <ActualResult />
+          <ScreenSnapshot />
+          <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+          <AlphanumericPass>true</AlphanumericPass>
+          <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+          <ClipboardPass>true</ClipboardPass>
+          <FileTestPass>true</FileTestPass>
+          <OjectTestPass>true</OjectTestPass>
+          <ExpectedCosmeticStr xsi:type="xsd:string">Caption: API Type:
+ Size: {Width=100, Height=23}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=8}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+        </TestAndVerify>
+      </TestEvents>
+    </FormUnderTest>
+    <FormUnderTest>
+      <TypeName>CSharpAPITextViewer.Form1</TypeName>
+      <GUIEvent>lblLookfor</GUIEvent>
+      <TestEvents>
+        <TestAndVerify>
+          <EventMember>lblLookfor</EventMember>
+          <VerifyingMember>lblLookfor</VerifyingMember>
+          <GUIActionSequence>2</GUIActionSequence>
+          <isGUI>false</isGUI>
+          <isField>false</isField>
+          <isProperty>false</isProperty>
+          <ExpectingResult />
+          <ActualResult />
+          <ScreenSnapshot />
+          <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+          <AlphanumericPass>true</AlphanumericPass>
+          <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+          <ClipboardPass>true</ClipboardPass>
+          <FileTestPass>true</FileTestPass>
+          <OjectTestPass>true</OjectTestPass>
+          <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Type the first few letters of the function name you look for:
+ Size: {Width=312, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=48}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+        </TestAndVerify>
+      </TestEvents>
+    </FormUnderTest>
+    <FormUnderTest>
+      <TypeName>CSharpAPITextViewer.Form1</TypeName>
+      <GUIEvent>lblAvailablefuncs</GUIEvent>
+      <TestEvents>
+        <TestAndVerify>
+          <EventMember>lblAvailablefuncs</EventMember>
+          <VerifyingMember>lblAvailablefuncs</VerifyingMember>
+          <GUIActionSequence>3</GUIActionSequence>
+          <isGUI>false</isGUI>
+          <isField>false</isField>
+          <isProperty>false</isProperty>
+          <ExpectingResult />
+          <ActualResult />
+          <ScreenSnapshot />
+          <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+          <AlphanumericPass>true</AlphanumericPass>
+          <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+          <ClipboardPass>true</ClipboardPass>
+          <FileTestPass>true</FileTestPass>
+          <OjectTestPass>true</OjectTestPass>
+          <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Available functions:
+ Size: {Width=272, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=88}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+        </TestAndVerify>
+      </TestEvents>
+    </FormUnderTest>
+    <FormUnderTest>
+      <TypeName>CSharpAPITextViewer.Form1</TypeName>
+      <GUIEvent>lblSelected</GUIEvent>
+      <TestEvents>
+        <TestAndVerify>
+          <EventMember>lblSelected</EventMember>
+          <VerifyingMember>lblSelected</VerifyingMember>
+          <GUIActionSequence>4</GUIActionSequence>
+          <isGUI>false</isGUI>
+          <isField>false</isField>
+          <isProperty>false</isProperty>
+          <ExpectingResult />
+          <ActualResult />
+          <ScreenSnapshot />
+          <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+          <AlphanumericPass>true</AlphanumericPass>
+          <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+          <ClipboardPass>true</ClipboardPass>
+          <FileTestPass>true</FileTestPass>
+          <OjectTestPass>true</OjectTestPass>
+          <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Selected functions:
+ Size: {Width=272, Height=16}
+ Child GUIs: 0
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=16,Y=208}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: False</ExpectedCosmeticStr>
+        </TestAndVerify>
+      </TestEvents>
+    </FormUnderTest>
+    <FormUnderTest>
+      <TypeName>CSharpAPITextViewer.Form1</TypeName>
+      <GUIEvent>grpScope</GUIEvent>
+      <TestEvents>
+        <TestAndVerify>
+          <EventMember>grpScope</EventMember>
+          <VerifyingMember>grpScope</VerifyingMember>
+          <GUIActionSequence>5</GUIActionSequence>
+          <isGUI>false</isGUI>
+          <isField>false</isField>
+          <isProperty>false</isProperty>
+          <ExpectingResult />
+          <ActualResult />
+          <ScreenSnapshot />
+          <ExpectAlphaNumericEqual>true</ExpectAlphaNumericEqual>
+          <AlphanumericPass>true</AlphanumericPass>
+          <ExpectClipBrdEqual>true</ExpectClipBrdEqual>
+          <ClipboardPass>true</ClipboardPass>
+          <FileTestPass>true</FileTestPass>
+          <OjectTestPass>true</OjectTestPass>
+           <ExpectedCosmeticStr xsi:type="xsd:string">Caption: Scope
+ Size: {Width=120, Height=72}
+ Child GUIs: 2
+ Font: [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+ Location: {X=344,Y=136}
+ Back Color: Color [Control]
+ Fore Color: Color [ControlText]
+ Enabled: True
+ Visible: True
+ hasChildren: True</ExpectedCosmeticStr>
+        </TestAndVerify>
+      </TestEvents>
+    </FormUnderTest>
+  </TypeVerificationSerializable>
+</TypeVerificationSerializable>

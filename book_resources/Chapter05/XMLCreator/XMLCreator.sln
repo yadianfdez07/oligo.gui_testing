@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLCreator", "XMLCreator.csproj", "{A8655223-832C-4EFB-84FE-32BD250521FC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A8655223-832C-4EFB-84FE-32BD250521FC}.Debug.ActiveCfg = Debug|.NET
+		{A8655223-832C-4EFB-84FE-32BD250521FC}.Debug.Build.0 = Debug|.NET
+		{A8655223-832C-4EFB-84FE-32BD250521FC}.Release.ActiveCfg = Release|.NET
+		{A8655223-832C-4EFB-84FE-32BD250521FC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
