@@ -89,25 +89,6 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
             }
         }
 
-        private void UpdateCurrentKeys(ApiTypes value)
-        {
-            switch (value)
-            {
-                case ApiTypes.Constant:
-                    CurrentKeys = ConstantKeys;
-                    break;
-                case ApiTypes.Declares:
-                    CurrentKeys = DllImportKeys;
-                    break;
-                case ApiTypes.Types:
-                    CurrentKeys = StructKeys;
-                    break;
-                default:
-                    CurrentKeys = ConstantKeys;
-                    break;
-            }
-        }
-
         private ObservableCollection<string> _constantKeys;
         public ObservableCollection<string> ConstantKeys
         {
@@ -160,6 +141,25 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
             RemoveBtnText = "Remove";
             ClearBtnText = "Clear";
             CopyBtnText = "Copy";
+        }
+
+        private void UpdateCurrentKeys(ApiTypes value)
+        {
+            switch (value)
+            {
+                case ApiTypes.Constant:
+                    CurrentKeys = ConstantKeys;
+                    break;
+                case ApiTypes.Declares:
+                    CurrentKeys = DllImportKeys;
+                    break;
+                case ApiTypes.Types:
+                    CurrentKeys = StructKeys;
+                    break;
+                default:
+                    CurrentKeys = ConstantKeys;
+                    break;
+            }
         }
     }
 }
