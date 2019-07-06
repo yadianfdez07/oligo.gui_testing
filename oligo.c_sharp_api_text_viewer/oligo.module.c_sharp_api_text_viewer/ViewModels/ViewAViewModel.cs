@@ -1,9 +1,20 @@
-﻿using Prism.Mvvm;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using oligo.domain.infrastructure;
+using Prism.Mvvm;
+using System.Linq;
+using oligo.module.c_sharp_api_text_viewer.Models;
 
 namespace oligo.module.c_sharp_api_text_viewer.ViewModels
 {
     public class ViewAViewModel : BindableBase
     {
+        private readonly IConstantTextViewer _constantTextViewer;
+        private readonly IDllImportTextViewer _dllImportTextViewer;
+        private readonly IStructTextViewer _structTextViewer;
+
         private string _message;
         public string Message
         {
@@ -67,10 +78,80 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
             set { SetProperty(ref _copyBtnText, value); }
         }
 
-        public ViewAViewModel()
+        private ApiTypes _selectedItem;
+        public ApiTypes SelectedItem
         {
+            get { return _selectedItem; }
+            set
+            {
+                UpdateCurrentKeys(value);
+                SetProperty(ref _selectedItem, value);
+            }
+        }
+
+        private void UpdateCurrentKeys(ApiTypes value)
+        {
+            switch (value)
+            {
+                case ApiTypes.Constant:
+                    CurrentKeys = ConstantKeys;
+                    break;
+                case ApiTypes.Declares:
+                    CurrentKeys = DllImportKeys;
+                    break;
+                case ApiTypes.Types:
+                    CurrentKeys = StructKeys;
+                    break;
+                default:
+                    CurrentKeys = ConstantKeys;
+                    break;
+            }
+        }
+
+        private ObservableCollection<string> _constantKeys;
+        public ObservableCollection<string> ConstantKeys
+        {
+            get { return _constantKeys; }
+            set { SetProperty(ref _constantKeys, value); }
+        }
+
+        private ObservableCollection<string> _dllImportKeys;
+        public ObservableCollection<string> DllImportKeys
+        {
+            get { return _dllImportKeys; }
+            set { SetProperty(ref _dllImportKeys, value); }
+        }
+
+        private ObservableCollection<string> _structKeys;
+        public ObservableCollection<string> StructKeys
+        {
+            get { return _structKeys; }
+            set { SetProperty(ref _structKeys, value); }
+        }
+
+        private ObservableCollection<string> _currentKeys;
+        public ObservableCollection<string> CurrentKeys
+        {
+            get { return _currentKeys; }
+            set { SetProperty(ref _currentKeys, value); }
+        }
+
+        public ViewAViewModel(IConstantTextViewer constantTextViewer, IDllImportTextViewer dllImportTextViewer, IStructTextViewer structTextViewer)
+        {
+            _constantTextViewer = constantTextViewer;
+            _constantTextViewer.ParseText();
+            ConstantKeys = new ObservableCollection<string>(_constantTextViewer.DefinitionList.Keys);
+            _dllImportTextViewer = dllImportTextViewer;
+            _dllImportTextViewer.ParseText();
+            DllImportKeys = new ObservableCollection<string>(_dllImportTextViewer.DefinitionList.Keys);
+            _structTextViewer = structTextViewer;
+            _structTextViewer.ParseText();
+            StructKeys = new ObservableCollection<string>(_structTextViewer.DefinitionList.Keys);
+
+            SelectedItem = ApiTypes.Constant;
+
             Message = "View A from your Prism Module";
-            
+
             ApiTypeText = "API type: ";
             SearchMessageText = "Type the first few letters of the function name you look for: ";
             AvailableFunctionsText = "Available functions: ";

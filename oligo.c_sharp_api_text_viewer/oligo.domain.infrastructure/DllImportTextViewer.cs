@@ -1,8 +1,18 @@
-﻿using System.IO;
+﻿using System.Collections;
+using System.IO;
 
 namespace oligo.domain.infrastructure
 {
-    public class DllImportTextViewer: ApiTextViewerBase
+    public interface IDllImportTextViewer: IApiTextViewer
+    {
+        string CompleteDllImportCoding(string dllName, string retType, string funcName, string paramStr);
+        string ParseParameters(string input);
+        string MakeAParameter(string paramA);
+        string GetDllName(string dllName);
+        string GetFunctionReturnType(string[] pieces);
+    }
+
+    public class DllImportTextViewer: ApiTextViewerBase, IDllImportTextViewer
     {
         public override void ParseText()
 		{
@@ -33,7 +43,7 @@ namespace oligo.domain.infrastructure
 
 		}
 
-		private string CompleteDllImportCoding(string dllName, string retType, string funcName, string paramStr)
+        public string CompleteDllImportCoding(string dllName, string retType, string funcName, string paramStr)
 		{
 			string dllCode = ApiUtility.CSHP_MARSHAL_EXP_3.Replace(ApiUtility.REPLACEABlE, dllName);
 			dllCode += ApiUtility.CSHP_SCOPE + ApiUtility.CSHP_MARSHAL_EXP_4 + retType + " ";
@@ -41,7 +51,7 @@ namespace oligo.domain.infrastructure
 			return dllCode;
 		}
 
-		private string ParseParameters(string input)
+        public string ParseParameters(string input)
 		{
 			int ArrParamCount = 0;
 			string tempInput = input;
@@ -79,7 +89,7 @@ namespace oligo.domain.infrastructure
 		}
 
 
-		private string MakeAParameter(string paramA)
+        public string MakeAParameter(string paramA)
 		{
 			paramA = paramA.Trim().Replace(" As ", " ");
 			string[] pPieces = paramA.Split(' ');
@@ -99,8 +109,8 @@ namespace oligo.domain.infrastructure
             ApiUtility.GetCSharpStyle(ref pPieces[pLen-1], true);
 			return pPieces[pLen-1] + " " + pPieces[pLen-2];
 		}
-		
-		private string GetDllName(string dllName)
+
+        public string GetDllName(string dllName)
 		{
 			if (dllName.ToLower().IndexOf(".dll")>0)
 				return dllName;
@@ -110,7 +120,7 @@ namespace oligo.domain.infrastructure
 			return dllName;
 		}
 
-		private string GetFunctionReturnType(string[] pieces)
+        public string GetFunctionReturnType(string[] pieces)
 		{
 			if (pieces[1].Trim() == "Sub")
 			{

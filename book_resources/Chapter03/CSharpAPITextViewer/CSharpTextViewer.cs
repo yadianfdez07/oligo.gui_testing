@@ -485,21 +485,18 @@ namespace CSharpAPITextViewer
 		}
 		private void cmbAPITypes_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-			Thread tConst;
+			//Thread tConst;
 			
 			switch (cmbAPITypes.Text)
 			{
-				case "Constants":
-					tConst = new Thread(new ThreadStart(UpdateConstants));
-					tConst.Start();
+                case "Constants":
+                    UpdateConstants();
 					break;
 				case "Declares":
-					tConst = new Thread(new ThreadStart(UpdateDllImports));
-					tConst.Start();
+                    UpdateDllImports();
 					break;
 				case "Types":
-					tConst = new Thread(new ThreadStart(UpdateStructs));
-					tConst.Start();
+                    UpdateStructs();
 					break;
 			}
 		}
@@ -587,7 +584,7 @@ namespace CSharpAPITextViewer
 			txtSelected.Clear();
 			try
 			{
-				OpenAPITextFile(@"C:\Program Files\Microsoft Visual Studio\Common\Tools\Winapi\WIN32API.TXT");
+				OpenAPITextFile(@"W:\_projects\oligo.gui_testing\book_resources\Chapter03\WIN32API.TXT");
 			}
 			catch (Exception ex)
 			{

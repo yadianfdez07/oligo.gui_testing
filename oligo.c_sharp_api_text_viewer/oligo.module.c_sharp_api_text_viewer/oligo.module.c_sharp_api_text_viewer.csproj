@@ -80,7 +80,12 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\oligo.domain.infrastructure\oligo.domain.infrastructure.csproj">
+      <Project>{D87E139E-12DB-4671-AFF8-E448FC725442}</Project>
+      <Name>oligo.domain.infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\ViewA.xaml">
       <SubType>Designer</SubType>

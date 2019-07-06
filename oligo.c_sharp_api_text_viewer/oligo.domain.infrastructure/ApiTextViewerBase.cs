@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace oligo.domain.infrastructure
 {
     public class ApiTextViewerBase : IApiTextViewer
     {
-        public SortedList DefinitionList { get; set; }
+        public Dictionary<string, string> DefinitionList { get; set; }
         public string FileName { get; set; }
 
         public ApiTextViewerBase()
         {
-            DefinitionList = new SortedList();
+            DefinitionList = new Dictionary<string, string>();
             FileName = GetFilePath();
         }
 
@@ -29,11 +31,13 @@ namespace oligo.domain.infrastructure
             }
         }
 
+
+
         public string GetKey(int index)
         {
             if (index < DefinitionList.Count)
             {
-                return (string) DefinitionList.GetKey(index);
+                return (string) DefinitionList.ElementAt(index).Key;
             }
 
             return string.Empty;
@@ -43,7 +47,7 @@ namespace oligo.domain.infrastructure
         {
             if (index < DefinitionList.Count)
             {
-                return (string) DefinitionList.GetByIndex(index);
+                return (string) DefinitionList.ElementAt(index).Value;
             }
 
             return string.Empty;
@@ -54,7 +58,7 @@ namespace oligo.domain.infrastructure
 
         }
 
-        protected string GetFilePath()
+        public string GetFilePath()
         {
             var basePath = AppDomain.CurrentDomain.BaseDirectory;
             var fullPath = Path.Combine(basePath, @"Resources\win32api.txt");

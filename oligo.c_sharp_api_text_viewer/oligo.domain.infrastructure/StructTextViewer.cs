@@ -2,11 +2,16 @@
 
 namespace oligo.domain.infrastructure
 {
-    public class StructTextViewer : ApiTextViewerBase
+    public interface IStructTextViewer: IApiTextViewer
     {
-        
+        string DefineCShpStructBody(string input);
+        string DefineCShpStruct(string input, ref string sKey);
+        bool IsStruct(string input);
+    }
 
-		public override void ParseText()
+    public class StructTextViewer : ApiTextViewerBase, IStructTextViewer
+    {
+        public override void ParseText()
 		{
 			bool structStart = false;
 			bool structEnd = false;
@@ -58,7 +63,7 @@ namespace oligo.domain.infrastructure
 			sr.Close();
 		}
 
-		private string DefineCShpStructBody(string input)
+        public string DefineCShpStructBody(string input)
 		{
 			if (input == "")
 			{
@@ -91,7 +96,7 @@ namespace oligo.domain.infrastructure
 			return "   " + cSharpStruct;
 		}
 
-		private string DefineCShpStruct(string input, ref string sKey)
+        public string DefineCShpStruct(string input, ref string sKey)
 		{
 			string[] structInfo = input.Split(' ');
 			string cSharpStruct = ApiUtility.CSHP_MARSHAL_EXP_6;
@@ -100,8 +105,8 @@ namespace oligo.domain.infrastructure
 			sKey = structInfo[1];
 			return cSharpStruct;
 		}
-		
-		private bool IsStruct(string input)
+
+        public bool IsStruct(string input)
 		{
 			if (input.Trim().StartsWith("Type"))
 			{

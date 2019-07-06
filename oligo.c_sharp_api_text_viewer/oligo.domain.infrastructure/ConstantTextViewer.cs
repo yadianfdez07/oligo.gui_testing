@@ -1,8 +1,14 @@
-﻿using System.IO;
+﻿using System.Collections;
+using System.IO;
 
 namespace oligo.domain.infrastructure
 {
-    public class ConstantTextViewer : ApiTextViewerBase
+    public interface IConstantTextViewer: IApiTextViewer
+    {
+        
+    }
+
+    public class ConstantTextViewer : ApiTextViewerBase, IConstantTextViewer
     {
         public override void ParseText()
         {

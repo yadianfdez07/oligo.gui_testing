@@ -19,10 +19,10 @@ namespace oligo.ui.c_sharp_api_text_viewer
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.Register<IApiTextViewer, ApiTextViewerBase>("TextViewerBase");
-            containerRegistry.Register<IApiTextViewer, ConstantTextViewer>("ConstantTextViewer");
-            containerRegistry.Register<IApiTextViewer, DllImportTextViewer>("DllImportTextViewer");
-            containerRegistry.Register<IApiTextViewer, StructTextViewer>("StructTextViewer");
+            containerRegistry.Register<IApiTextViewer, ApiTextViewerBase>();
+            containerRegistry.Register<IConstantTextViewer, ConstantTextViewer>();
+            containerRegistry.Register<IDllImportTextViewer, DllImportTextViewer>();
+            containerRegistry.Register<IStructTextViewer, StructTextViewer>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
