@@ -30,9 +30,7 @@ namespace oligo.domain.infrastructure
                 DefinitionList.Add(key, data);
             }
         }
-
-
-
+        
         public string GetKey(int index)
         {
             if (index < DefinitionList.Count)
