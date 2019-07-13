@@ -5,7 +5,9 @@ using System.Collections.ObjectModel;
 using oligo.domain.infrastructure;
 using Prism.Mvvm;
 using System.Linq;
+using System.Windows;
 using oligo.module.c_sharp_api_text_viewer.Models;
+using Prism.Commands;
 
 namespace oligo.module.c_sharp_api_text_viewer.ViewModels
 {
@@ -14,6 +16,8 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
         private readonly IConstantTextViewer _constantTextViewer;
         private readonly IDllImportTextViewer _dllImportTextViewer;
         private readonly IStructTextViewer _structTextViewer;
+
+        #region UI-Content
 
         private string _message;
         public string Message
@@ -78,6 +82,8 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
             set { SetProperty(ref _copyBtnText, value); }
         }
 
+        #endregion
+
         private ApiTypes _selectedItem;
         public ApiTypes SelectedItem
         {
@@ -115,6 +121,72 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
         {
             get { return _currentKeys; }
             set { SetProperty(ref _currentKeys, value); }
+        }
+
+        private string _selectedFunction;
+        public string SelectedFunction
+        {
+            get { return _selectedFunction; }
+            set { SetProperty(ref _selectedFunction, value); }
+        }
+
+        private string _cSharpSyntax;
+        public string CSharpSyntax
+        {
+            get { return _cSharpSyntax; }
+            set { SetProperty(ref _cSharpSyntax, value); }
+        }
+
+        private DelegateCommand _addSelectedFunctionCommand;
+        public DelegateCommand AddSelectedFunctionCommand =>
+            _addSelectedFunctionCommand ?? (_addSelectedFunctionCommand = new DelegateCommand(ExecuteCommandName, CanExecuteMethod).ObservesProperty(() => SelectedFunction));
+
+        private DelegateCommand _clearCommand;
+        public DelegateCommand ClearCommand =>
+            _clearCommand ?? (_clearCommand = new DelegateCommand(ExecuteClearCommand, CanExecuteClear).ObservesProperty(() => CSharpSyntax));
+
+        private DelegateCommand _copyCommand;
+        public DelegateCommand CopyCommand =>
+            _copyCommand ?? (_copyCommand = new DelegateCommand(ExecuteCopyCommand, CanExecuteClear).ObservesProperty(()=> CSharpSyntax));
+
+        void ExecuteCopyCommand()
+        {
+            Clipboard.SetText(CSharpSyntax);
+            CSharpSyntax = string.Empty;
+        }
+
+        private bool CanExecuteClear()
+        {
+            return !string.IsNullOrEmpty(CSharpSyntax);
+        }
+
+        void ExecuteClearCommand()
+        {
+            CSharpSyntax = string.Empty;
+        }
+
+        private bool CanExecuteMethod()
+        {
+            return SelectedFunction != null;
+        }
+
+        void ExecuteCommandName()
+        {
+            switch (SelectedItem)
+            {
+                case ApiTypes.Constant:
+                    CSharpSyntax += _constantTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE + " ", "");
+                    break;
+                case ApiTypes.Declares:
+                    CSharpSyntax += _dllImportTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE + " ", "");
+                    break;
+                case ApiTypes.Types:
+                    CSharpSyntax += _structTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE + " ", "");
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            CSharpSyntax += System.Environment.NewLine;
         }
 
         public ViewAViewModel(IConstantTextViewer constantTextViewer, IDllImportTextViewer dllImportTextViewer, IStructTextViewer structTextViewer)
@@ -161,5 +233,6 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
                     break;
             }
         }
+
     }
 }

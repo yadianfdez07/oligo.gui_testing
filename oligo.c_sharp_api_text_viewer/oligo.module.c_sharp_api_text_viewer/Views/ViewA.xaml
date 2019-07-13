@@ -14,7 +14,7 @@
 
     <Grid Margin="5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" /> 
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -52,22 +52,32 @@
         <ListBox
             Grid.Row="5"
             Grid.Column="0"
-            ItemsSource="{Binding CurrentKeys}" />
+            ItemsSource="{Binding CurrentKeys}"
+            SelectedItem="{Binding SelectedFunction}" />
 
         <Label
             Grid.Row="6"
             Grid.Column="0"
             Content="{Binding SelectedFunctionsText}" />
 
-        <TextBlock Grid.Row="7" Grid.Column="0" Text=""  />
+        <TextBlock
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Text="{Binding CSharpSyntax}" />
 
         <StackPanel
             Grid.Row="5"
             Grid.Column="2"
             VerticalAlignment="Center">
 
-            <RadioButton GroupName="AccessModifier" Content="public" IsChecked="True" />
-            <RadioButton GroupName="AccessModifier" Content="private" />
+            <RadioButton
+                Content="public"
+                GroupName="AccessModifier"
+                IsChecked="True" />
+            <RadioButton
+                Content="private"
+                GroupName="AccessModifier" />
 
             <StackPanel
                 Margin="15"
@@ -78,32 +88,34 @@
                     Width="Auto"
                     MinWidth="100"
                     Margin="10"
+                    Command="{Binding AddSelectedFunctionCommand}"
                     Content="{Binding AddBtnText}" />
                 <Button
                     Width="Auto"
                     MinWidth="100"
                     Margin="10"
+                    Visibility="Collapsed"
                     Content="{Binding RemoveBtnText}" />
             </StackPanel>
-        </StackPanel>
 
-        <StackPanel
-            Grid.Row="7"
-            Grid.Column="2"
-            Margin="15"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Bottom"
-            Orientation="Horizontal">
-            <Button
-                Width="Auto"
-                MinWidth="100"
-                Margin="10"
-                Content="{Binding ClearBtnText}" />
-            <Button
-                Width="Auto"
-                MinWidth="100"
-                Margin="10"
-                Content="{Binding CopyBtnText}" />
+            <StackPanel
+                Margin="15"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal">
+                <Button
+                    Width="Auto"
+                    MinWidth="100"
+                    Margin="10"
+                    Command="{Binding ClearCommand}"
+                    Content="{Binding ClearBtnText}" />
+                <Button
+                    Width="Auto"
+                    MinWidth="100"
+                    Margin="10"
+                    Command="{Binding CopyCommand}"
+                    Content="{Binding CopyBtnText}" />
+            </StackPanel>
         </StackPanel>
 
 
