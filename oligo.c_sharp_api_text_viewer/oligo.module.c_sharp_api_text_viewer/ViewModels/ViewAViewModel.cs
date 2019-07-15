@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using oligo.domain.infrastructure;
 using Prism.Mvvm;
-using System.Linq;
 using System.Windows;
 using oligo.module.c_sharp_api_text_viewer.Models;
 using Prism.Commands;
@@ -137,6 +135,16 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
             set { SetProperty(ref _cSharpSyntax, value); }
         }
 
+        private string _searchTerm;
+        public string SearchTerm
+        {
+            get { return _searchTerm; }
+            set
+            {
+                SetProperty(ref _searchTerm, value);
+            }
+        }
+
         private DelegateCommand _addSelectedFunctionCommand;
         public DelegateCommand AddSelectedFunctionCommand =>
             _addSelectedFunctionCommand ?? (_addSelectedFunctionCommand = new DelegateCommand(ExecuteCommandName, CanExecuteMethod).ObservesProperty(() => SelectedFunction));
@@ -175,13 +183,13 @@ namespace oligo.module.c_sharp_api_text_viewer.ViewModels
             switch (SelectedItem)
             {
                 case ApiTypes.Constant:
-                    CSharpSyntax += _constantTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE + " ", "");
+                    CSharpSyntax += _constantTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE, "public");
                     break;
                 case ApiTypes.Declares:
-                    CSharpSyntax += _dllImportTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE + " ", "");
+                    CSharpSyntax += _dllImportTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE, "public");
                     break;
                 case ApiTypes.Types:
-                    CSharpSyntax += _structTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE + " ", "");
+                    CSharpSyntax += _structTextViewer.GetCSharpSyntax(CurrentKeys.IndexOf(SelectedFunction)).Replace(ApiUtility.CSHP_SCOPE, "public");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

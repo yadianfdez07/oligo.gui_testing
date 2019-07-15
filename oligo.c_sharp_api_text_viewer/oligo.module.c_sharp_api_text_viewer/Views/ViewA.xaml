@@ -43,6 +43,7 @@
         <TextBox
             Grid.Row="3"
             Grid.Column="0"
+            Text="{Binding SearchTerm}"
             TextWrapping="Wrap" />
         <Label
             Grid.Row="4"
@@ -94,8 +95,8 @@
                     Width="Auto"
                     MinWidth="100"
                     Margin="10"
-                    Visibility="Collapsed"
-                    Content="{Binding RemoveBtnText}" />
+                    Content="{Binding RemoveBtnText}"
+                    Visibility="Collapsed" />
             </StackPanel>
 
             <StackPanel
